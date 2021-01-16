@@ -1,10 +1,26 @@
+import React, { useState } from 'react';
+
 function Calculator() {
-  for (let i=0; i<10; i++) {
-    console.log(i) 
+  const buttons = [];
+  // const [variable, setVariableFunction] = useState(defaultValue of variable);
+  const [counter, setCounter] = useState(0);
+
+  const onClick = () => {
+    setCounter(counter + 1);
   }
-    return (
+
+  for (let i=0; i<10; i++) {
+    buttons.push(<button onClick={onClick} key={i}>{i}</button>)
+  }
+
+  return (
     <div>
-      
+      <div>
+        counter: {counter}
+      </div>
+      <div>
+        {buttons}
+      </div>
     </div>
   );
 }
