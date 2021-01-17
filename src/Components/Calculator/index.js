@@ -13,7 +13,7 @@ function Calculator() {
     buttons.push(<button onClick={onClick} key={i}>{i}</button>)
   }
 
-  var fns = ["+", "-", "x", "/", "EXP"]
+  var fns = ["+", "-", "x", "/", "EXP", "ON", "OFF"]
   var j;
 
   for (j of fns) {
